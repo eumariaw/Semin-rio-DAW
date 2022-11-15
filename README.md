@@ -54,31 +54,30 @@ Autenticação e Autorização do seu blog:
 
 ## Instalação e configuração
 
-Agora você aprenderá a instalar o Cake.PHP
+O CakePHP é rápido e fácil de instalar. Os requisitos mínimos são um servidor web e uma cópia do Cake, só isso!
 
-
-### Requisitos necessários para instalação:
+### Requisitos 
 
 - HTTP Server;
 - PHP 7.4 ou superior;
-- extensão mbstring;
-- extensão intl.
+
+Tecnicamente não é exigido um banco de dados mas imaginamos que a maioria das aplicações irá utilizar um. O CakePHP suporta uma variedade deles:
+
+- MySQL (4 ou superior);
+- PostgreSQL;
+- Microsoft SQL Server;
+- SQLite.
+
+### Licença
+
+O CakePHP é licenciado sob uma Licença MIT. Isto significa que você tem liberdade para modificar, distribuir e republicar o código-fonte com a condição de que os avisos de copyright permaneçam intactos. Você também tem liberdade para incorporar o CakePHP em qualquer aplicação comercial ou de código fechado.
 
 
-### Instalando...
+### Baixando...
 
-Primeiramente, você precisará baixar e instalar o Composer execiutando "curl -s https://getcomposer.org/installer | php" no seu terminal, ou você pode baixar composer.phar do Site oficial do Composer. Para criar um novo app com Cake.PHP, basta executar "php composer.phar create-project --prefer-dist cakephp/app:4.* [app_name]"
+Há duas maneiras de se obter uma cópia atualizada do CakePHP. Você pode fazer o download de um arquivo comprimido (zip/tar.gz/tar.bz2) no site principal ou obter o código a partir do repositório git.
 
-
-**Mantendo sincronização com as últimas alterações no CakePHP**
-
-Para se manter atualizado basta adicionar um "composer.json" em sua aplicação 
-""require": {
-  "cakephp/cakephp": "dev-master"
-}"
-
-
-**Permissões**
+### Permissões
 
 O CakePHP utiliza o diretório tmp para diversas operações. Você pode executar somente uma vez os seguintes comandos a partir do diretório da
 sua aplicação para assegurar que as permissões serão configuradas corretamente
@@ -90,7 +89,26 @@ setfacl -R -d -m u:${HTTPDUSER}:rwx tmp
 setfacl -R -m u:${HTTPDUSER}:rwx logs
 setfacl -R -d -m u:${HTTPDUSER}:rwx logs"
 
+---
 
-**Servidor de Desenvolvimento**
+##Configuração
 
-para executar o servidor integrado do PHP que vai tornar sua aplicação disponível em ttp://host:port. A partir do console CakePHP da aplicação, execute: "bin/cake.server".
+É possível usar três maneiras diferentes: 
+
+### Desenvolvimento
+
+Descompacte o conteúdo do arquivo do Cake em /var/www/html. Você agora tem uma pasta na raiz do seu servidor web com o nome da versão que você baixou (por exemplo, cake2.0.0). Renomeie essa pasta para cake_2_0. Sua configuração de desenvolvimento será semelhante a esta em seu sistema de arquivos:
+
+![IMG-20221115-WA0000](https://user-images.githubusercontent.com/102993916/202018270-3ec8fd2f-ec5b-49b3-894c-53694c6ba693.jpg)
+
+Se o seu servidor web está configurado corretamente, agora você deve encontrar sua aplicação Cake acessível em http://www.example.com/cake_2_0/.
+
+**Utilizando um pacote CakePHP para múltiplas Aplicações**
+
+Para começar, clone o CakePHP em um diretório. Para esse exemplo, nós vamos utilizar /home/mark/projects: "git clone git://github.com/cakephp/cakephp.git /home/mark/projects/cakephp". Isso ira clonar o CakePHP no seu diretório /home/mark/projects. Se você não quiser utilizar git, você pode baixar um compilado e os próximos passos serão os mesmos. Em seguida você terá que localizar e modificar seu php.ini. Em sistemas *nix está localizado na maioria das vezes em /etc/php.ini, mas utilizando php -i e procurando por ‘Loaded Configuration File’, você pode achar a localização atual. Uma vez que você achou o arquivo ini correto, modifique a configuração include_path para incluir /home/mark/projects/cakephp/lib. Um exemplo semelhamte deveria ser como "include_path = .:/home/mark/projects/cakephp/lib:/usr/local/php/lib/php". Depois de reiniciar seu servidor web, você deve ver as mudanças refletidas em phpinfo().
+
+### Produção
+
+Descompacte o conteúdo do arquivo do Cake em um diretório de sua escolha. Para fins deste exemplo, assumimos que você escolheu instalar o Cake em/cake_install. Sua configuração de produção será semelhante a esta em seu sistema de arquivos:
+
+![Screenshot_20221115-173059_Samsung Notes](https://user-images.githubusercontent.com/102993916/202019427-73074ad9-38a0-47b4-b815-d02bfc013836.jpg)
