@@ -8,11 +8,15 @@
 ## INTRODUÇÃO
 
 
-  O grupo já apresentado tratará sobre a plataforma de linguagem PHP: Cake.PHP. Será apresentado à turma 303 do ano de 2022 no dia ?/11/2022 para que o conhecimento da turma sobre tal assunto seja ampliado.
+  O grupo já apresentado tratará sobre a plataforma de linguagem PHP: Cake.PHP. Será apresentado à turma 303 do ano de 2022 no dia ?/11/2022 para que o conhecimento da turma sobre tal assunto seja ampliado. O CakePHP, é um framework de PHP que é usado para o desenvolvimento de aplicações web. Ele possui uma estrutura extensível para o desenvolvimento, a manutenção e a implantação de aplicativos. O objetivo dessa ferramenta é simplificar o processo de desenvolvimento para a construção de aplicações web, a partir de um núcleo geral para organizar o banco de dados e outros recursos que ajudam a reduzir a codificação. Além disso, o CakePHP possui recursos importantes como validação embutida, listas de controle de acesso (ACLs), sanitização de dados, segurança e componentes de manipulação de sessão e cache de view. O CakePHP é uma ferramenta bastante escolhida pelos desenvolvedores webs por ser baseado no padrão de desenvolvimento Model-View-Controller, que separa a lógica da aplicação de sua apresentação para o usuário, ou seja, essa arquitetura nos permite construir aplicações web com o mínimo de script uma vez que a apresentação é separada do código. Um exemplo disso é quando desejamos modificar todo o layout de páginas sem mudar o restante da aplicação. A arquitetura MVC no CakePHP é representada assim:
+  
+
+
 
   Imagine que você é um mero mortal e não sabe programar em PHP. Caso vocẽ não tenha um bom professor como a turma 303 do ano de 2022 do Colégio Técnico da UFMG acaba se tornando complicado. Ou até mesmo caso você não tenha tempo o suficiente ou o interesse necessário para aprender vocÊ pode usar o Cake.PHP para isso! 
  
   É possível criar blogs pessoais e muito mais! Essa é uma plataforma de criação de aplicações web, no qual o principal objetivo é permitir que você trabalhe em uma estrutura que possa programar de forma rápida e sem a perda de flexibilidade.
+  
 
 Caso você queira criar um blog é simples, rápido e fácil.
 
