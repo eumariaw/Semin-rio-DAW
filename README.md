@@ -1,6 +1,6 @@
 # Seminário-DAW
 
-**Data de entrega: ?/11/2022**
+**Data de entrega: 14/11/2022**
 **Integrantes do grupo: Deborah Perdigão, Eduardo Evangelista, Isabela Cristina, Waleska Pereira e Wanessa de Oliveira**
 
 ---
@@ -8,7 +8,7 @@
 ## INTRODUÇÃO
 
 
-  O grupo já apresentado tratará sobre a plataforma de linguagem PHP: Cake.PHP. Será apresentado à turma 303 do ano de 2022 no dia ?/11/2022 para que o conhecimento da turma sobre tal assunto seja ampliado. O CakePHP, é um framework de PHP que é usado para o desenvolvimento de aplicações web. Ele possui uma estrutura extensível para o desenvolvimento, a manutenção e a implantação de aplicativos. O objetivo dessa ferramenta é simplificar o processo de desenvolvimento para a construção de aplicações web, a partir de um núcleo geral para organizar o banco de dados e outros recursos que ajudam a reduzir a codificação. Além disso, o CakePHP possui recursos importantes como validação embutida, listas de controle de acesso (ACLs), sanitização de dados, segurança e componentes de manipulação de sessão e cache de view. O CakePHP é uma ferramenta bastante escolhida pelos desenvolvedores webs por ser baseado no padrão de desenvolvimento Model-View-Controller, que separa a lógica da aplicação de sua apresentação para o usuário, ou seja, essa arquitetura nos permite construir aplicações web com o mínimo de script uma vez que a apresentação é separada do código. Um exemplo disso é quando desejamos modificar todo o layout de páginas sem mudar o restante da aplicação. A arquitetura MVC no CakePHP é representada assim:
+  O grupo já apresentado tratará sobre a plataforma de linguagem PHP: Cake.PHP. Será apresentado à turma 303 do ano de 2022 no dia 14/11/2022 para que o conhecimento da turma sobre tal assunto seja ampliado. O CakePHP, é um framework de PHP que é usado para o desenvolvimento de aplicações web. Ele possui uma estrutura extensível para o desenvolvimento, a manutenção e a implantação de aplicativos. O objetivo dessa ferramenta é simplificar o processo de desenvolvimento para a construção de aplicações web, a partir de um núcleo geral para organizar o banco de dados e outros recursos que ajudam a reduzir a codificação. Além disso, o CakePHP possui recursos importantes como validação embutida, listas de controle de acesso (ACLs), sanitização de dados, segurança e componentes de manipulação de sessão e cache de view. O CakePHP é uma ferramenta bastante escolhida pelos desenvolvedores webs por ser baseado no padrão de desenvolvimento Model-View-Controller, que separa a lógica da aplicação de sua apresentação para o usuário, ou seja, essa arquitetura nos permite construir aplicações web com o mínimo de script uma vez que a apresentação é separada do código. Um exemplo disso é quando desejamos modificar todo o layout de páginas sem mudar o restante da aplicação. A arquitetura MVC no CakePHP é representada assim:
   
 
 
@@ -223,3 +223,15 @@ navegador para http://example.com/ ou http://example.com/cake_install/. Neste po
 CakePHP e a mensagem do estado da configuração do seu banco de dados.
 
 Parabéns! Você já está pronto para criar sua primeira aplicação CakePHP.
+
+---
+
+## Ferramentas similares 
+
+### LARAVEL
+
+É um dos frameworks PHP mais utilizados no mercado, gratuito e de código aberto, utilizado no desenvolvimento de sistemas para web. Ele foi criado pelo programador Tyler B. Otwell e teve sua primeira versão lançada em 2011. É baseado na arquitetura MVC ( Model-View-Controller, ou Modelo-Visão-Controle, em português). Possui uma comunidade bastante ativa, vários documentos disponíveis gratuitamente na internet e cursos e treinamentos oficiais pela plataforma Laracasts. Também possui um Homestead pré-configurado e pronto para ser instalado. A versão mais recente é o Laravel 8, lançado em setembro de 2020. Versões nomeadas com a sigla LTS recebem suporte estendido para resolução de bugs por 2 anos e de problemas de segurança por 3 anos.
+
+### SLIM
+
+Slim é outra alternativa popular, mas totalmente diferente ao CakePHP, é um Micro-Framework bastante leve e prático e possui como principal característica a implementação RESTful, facilitando a vida do desenvolvedor na criação de APIs de pequeno ou médio porte de maneira organizada. Tem baixa necessidade de configuração. Por não possuir um padrão de desenvolvimento definido, há liberdade para definir uma estrutura personalizada para o projeto. Tem grande facilidade na integração de aplicações externas ao projeto. Possui suporte nativo a rotas HTTP. Possui uma comunidade ativa, entre outros. Seu download pode ser feito em seu site.
