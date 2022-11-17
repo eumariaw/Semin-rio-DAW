@@ -235,3 +235,8 @@ Parabéns! Você já está pronto para criar sua primeira aplicação CakePHP.
 ### SLIM
 
 Slim é outra alternativa popular, mas totalmente diferente ao CakePHP, é um Micro-Framework bastante leve e prático e possui como principal característica a implementação RESTful, facilitando a vida do desenvolvedor na criação de APIs de pequeno ou médio porte de maneira organizada. Tem baixa necessidade de configuração. Por não possuir um padrão de desenvolvimento definido, há liberdade para definir uma estrutura personalizada para o projeto. Tem grande facilidade na integração de aplicações externas ao projeto. Possui suporte nativo a rotas HTTP. Possui uma comunidade ativa, entre outros. Seu download pode ser feito em seu site.
+
+
+
+
+SLIDE DA APRESENTAÇÃO: https://www.canva.com/design/DAFSDcUkTkI/J03oReovH5HZng1Gy4NKuw/edit?utm_content=DAFSDcUkTkI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
