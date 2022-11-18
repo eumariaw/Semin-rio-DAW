@@ -1,26 +1,47 @@
 # Seminário-DAW
 
-**Data de entrega: 14/11/2022**
-**Integrantes do grupo: Deborah Perdigão, Eduardo Evangelista, Isabela Cristina, Waleska Pereira e Wanessa de Oliveira**
+<p align="center">
+  <img src="cakelogo.png" />
+</p>
+
+## Índice
+
+* [Introdução](#introdução)
+* [Instalação e configuração](#instalação-e-configuração)
+* [Primeiros Passos](#primeiros-passos)
+* [Ferramentas Similares](#ferramentas-similares)
 
 ---
 
-## INTRODUÇÃO
+## Introdução
 
 
-  O grupo já apresentado tratará sobre a plataforma de linguagem PHP: Cake.PHP. Será apresentado à turma 303 do ano de 2022 no dia 14/11/2022 para que o conhecimento da turma sobre tal assunto seja ampliado. O CakePHP, é um framework de PHP que é usado para o desenvolvimento de aplicações web. Ele possui uma estrutura extensível para o desenvolvimento, a manutenção e a implantação de aplicativos. O objetivo dessa ferramenta é simplificar o processo de desenvolvimento para a construção de aplicações web, a partir de um núcleo geral para organizar o banco de dados e outros recursos que ajudam a reduzir a codificação. Além disso, o CakePHP possui recursos importantes como validação embutida, listas de controle de acesso (ACLs), sanitização de dados, segurança e componentes de manipulação de sessão e cache de view. O CakePHP é uma ferramenta bastante escolhida pelos desenvolvedores webs por ser baseado no padrão de desenvolvimento Model-View-Controller, que separa a lógica da aplicação de sua apresentação para o usuário, ou seja, essa arquitetura nos permite construir aplicações web com o mínimo de script uma vez que a apresentação é separada do código. Um exemplo disso é quando desejamos modificar todo o layout de páginas sem mudar o restante da aplicação. A arquitetura MVC no CakePHP é representada assim:
+O grupo já apresentado tratará sobre a plataforma CakePHP. 
+
+O CakePHP é um framework de PHP que é usado para o desenvolvimento de aplicações web. 
+Ele possui uma estrutura extensível para o desenvolvimento, a manutenção e a implantação de aplicativos.
+
+O objetivo dessa ferramenta é simplificar o processo de desenvolvimento para a construção de aplicações web, 
+a partir de um núcleo geral para organizar o banco de dados e outros recursos que ajudam a reduzir a codificação.
+
+Além disso, o CakePHP possui recursos importantes como validação embutida, listas de controle de acesso (ACLs), sanitização de dados, segurança e componentes de manipulação de sessão e cache de view. 
+
+É uma ferramenta bastante escolhida pelos desenvolvedores webs por ser baseado no padrão de desenvolvimento Model-View-Controller, que separa a lógica da aplicação de sua apresentação para o usuário, ou seja, essa arquitetura nos permite construir aplicações web com o mínimo de script uma vez que a apresentação é separada do código. 
+Um exemplo disso é quando desejamos modificar todo o layout de páginas sem mudar o restante da aplicação. 
+
+A arquitetura MVC no CakePHP é representada assim:
   
 
 
 
-  Imagine que você é um mero mortal e não sabe programar em PHP. Caso vocẽ não tenha um bom professor como a turma 303 do ano de 2022 do Colégio Técnico da UFMG acaba se tornando complicado. Ou até mesmo caso você não tenha tempo o suficiente ou o interesse necessário para aprender vocÊ pode usar o Cake.PHP para isso! 
+ Imagine que você é um mero mortal e não sabe programar em PHP. Caso vocẽ não tenha um bom professor como a turma 303 do ano de 2022 do Colégio Técnico da UFMG acaba se tornando complicado. Ou até mesmo caso você não tenha tempo o suficiente ou o interesse necessário para aprender vocÊ pode usar o Cake.PHP para isso! 
  
-  É possível criar blogs pessoais e muito mais! Essa é uma plataforma de criação de aplicações web, no qual o principal objetivo é permitir que você trabalhe em uma estrutura que possa programar de forma rápida e sem a perda de flexibilidade.
+É possível criar blogs pessoais e muito mais! Essa é uma plataforma de criação de aplicações web, no qual o principal objetivo é permitir que você trabalhe em uma estrutura que possa programar de forma rápida e sem a perda de flexibilidade.
   
 
 Caso você queira criar um blog é simples, rápido e fácil.
 
-**Criando um blog com Cake.PHP**
+**Criando um blog com CakePHP**
 
 Básico:
 - Você precisará de um servidor web em funcionamento, um servidor de banco de dados e por último um conhecimento básico sobre PHP(é possível adiquir em pouquíssimo tempo com aulas gratuitas);
@@ -82,13 +103,14 @@ Há duas maneiras de se obter uma cópia atualizada do CakePHP. Você pode fazer
 O CakePHP utiliza o diretório tmp para diversas operações. Você pode executar somente uma vez os seguintes comandos a partir do diretório da
 sua aplicação para assegurar que as permissões serão configuradas corretamente
 
+```
 "HTTPDUSER=`ps aux | grep -E '[a]pache|[h]ttpd|[_]www|[w]ww-data|[n]ginx' | grep -v root␣
 ˓→| head -1 | cut -d\ -f1`
 setfacl -R -m u:${HTTPDUSER}:rwx tmp
 setfacl -R -d -m u:${HTTPDUSER}:rwx tmp
 setfacl -R -m u:${HTTPDUSER}:rwx logs
 setfacl -R -d -m u:${HTTPDUSER}:rwx logs"
-
+```
 ---
 
 ## Configuração
@@ -99,7 +121,17 @@ setfacl -R -d -m u:${HTTPDUSER}:rwx logs"
 
 Descompacte o conteúdo do arquivo do Cake em /var/www/html. Você agora tem uma pasta na raiz do seu servidor web com o nome da versão que você baixou (por exemplo, cake2.0.0). Renomeie essa pasta para cake_2_0. Sua configuração de desenvolvimento será semelhante a esta em seu sistema de arquivos:
 
-![IMG-20221115-WA0000](https://user-images.githubusercontent.com/102993916/202018270-3ec8fd2f-ec5b-49b3-894c-53694c6ba693.jpg)
+```
+/var/www/html/
+cake_2_0/
+app/
+lib/
+plugins/
+vendors/
+.htaccess
+index.php
+README
+```
 
 Se o seu servidor web está configurado corretamente, agora você deve encontrar sua aplicação Cake acessível em http://www.example.com/cake_2_0/.
 
@@ -121,7 +153,17 @@ Depois de reiniciar seu servidor web, você deve ver as mudanças refletidas em 
 
 Descompacte o conteúdo do arquivo do Cake em um diretório de sua escolha. Para fins deste exemplo, assumimos que você escolheu instalar o Cake em/cake_install. Sua configuração de produção será semelhante a esta em seu sistema de arquivos:
 
-![Screenshot_20221115-173059_Samsung Notes](https://user-images.githubusercontent.com/102993916/202019427-73074ad9-38a0-47b4-b815-d02bfc013836.jpg)
+```
+/cake_install/
+app/
+webroot/ (esse diretório está definido como diretiva ``DocumentRoot``)
+lib/
+plugins/
+vendors/
+.htaccess
+index.php
+README
+```
 
 Desenvolvedores usando o Apache devem definir o DocumentRoot do domínio para: "DocumentRoot /cake_install/app/webroot" Se o seu servidor web estiver configurado corretamente, você deve encontrar agora sua aplicação Cake acessível em http://www.example.com.
 
@@ -150,7 +192,18 @@ Há três constantes que você precisa editar: ROOT, APP_DIR, e CAKE_CORE_INCLUD
 
 Dado este tipo de configuração, eu preciso editar meu arquivo webroot/index.php (que vai acabar em /var/www/mysite/index.php, neste exemplo) para algo como o seguinte:
 
-![Screenshot_20221115-182541_Samsung Notes](https://user-images.githubusercontent.com/102993916/202028500-7642713d-087c-4f91-a5fb-c90e2529c660.jpg)
+```
+// /app/webroot/index.php (parcial, comentários removidos)
+if (!defined('ROOT')) {
+define('ROOT', DS . 'home' . DS . 'me');
+}
+if (!defined('APP_DIR')) {
+define ('APP_DIR', 'myapp');
+}
+if (!defined('CAKE_CORE_INCLUDE_PATH')) {
+define('CAKE_CORE_INCLUDE_PATH', DS . 'usr' . DS . 'lib');
+}
+```
 
 Recomenda-se a utilização da constante DS ao invés das barras para delimitar os caminhos de arquivos.
 
@@ -160,8 +213,21 @@ Aqui estão algumas coisas que você pode tentar fazer para rodar corretamente. 
 
 1. Tenha certeza que a sobreposição do .htaccess está sendo permitida, ou seja, que o AllowOverride está configurado como All para o DocumentRoot. Você deve ver algo similar a isso:
 
-![Screenshot_20221115-182847_Samsung Notes](https://user-images.githubusercontent.com/102993916/202032164-e510e2e3-3f83-4e11-9c9b-35a987f358d8.jpg)
-
+```
+# Cada diretório com o Apache tenha acesso pode ser configurado com
+# relação aos quais serviços e recursos são permitidos e/ou
+# desabilitados neste diretório (e seus subdiretórios).
+#
+# Primeiro, configuramos o o "padrão" para ter um conjunto muito
+# restrito de recursos.
+#
+<Directory />
+Options FollowSymLinks
+AllowOverride All
+# Order deny,allow
+# Deny from all
+</Directory>
+```
 
 2. Tenha certeza de estar carregando o mod_rewrite corretamente. Você deve ver algo como: "LoadModule rewrite_module libexec/apache2/mod_rewrite.so".
 
@@ -171,35 +237,129 @@ Depois de fazer as alterações, reinicie o Apache para ter certeza que as confi
 
 No diretório raiz do Cake (precisa ser copiado para o seu DocumentRoot, este redireciona tudo para a sua aplicação):
 
-![Screenshot_20221115-183144_Samsung Notes](https://user-images.githubusercontent.com/102993916/202029524-dd2ffa9a-68a4-436a-bd5b-e78eaef0b08d.jpg)
+```
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^$ app/webroot/ [L]
+RewriteRule (.*) app/webroot/$1 [L]
+</IfModule>
+```
 
 O diretório app do seu Cake (será copiado para o diretório principal da sua aplicação pelo bake):
 
-![Screenshot_20221115-183501_Samsung Notes](https://user-images.githubusercontent.com/102993916/202030034-2f6a3a0f-d364-48e1-90d1-de84dd19b55b.jpg)
+```
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^$ webroot/ [L]
+RewriteRule (.*) webroot/$1 [L]
+</IfModule>
+```
 
 Diretório webroot do Cake (será copiado para a raiz da sua aplicação web pelo bake):
 
-![Screenshot_20221115-183625_Samsung Notes](https://user-images.githubusercontent.com/102993916/202032225-9c90d534-9004-4b7d-bd1a-51eb7becf94b.jpg)
-
+```
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>
+```
 **URLs amigáveis e Lighttpd**
 
 Usando o mod_rewrite O modo mais fácil para se obter URLs amigáveis é adicionando este script na configuração do seu lighty. Basta editar a URL, e tudo deve funcionar. Por favor, note que isto não funciona em instalações do Cake em subdiretórios.
 
-![Screenshot_20221115-183805_Samsung Notes](https://user-images.githubusercontent.com/102993916/202030572-700489b8-d8d1-4722-a7a6-5cb42aa2c185.jpg)
+```
+$HTTP["host"] =~ "^(www\.)?example.com$" {
+url.rewrite-once = (
+# if the request is for css|files etc, do not pass on to Cake
+"^/(css|files|img|js)/(.*)" => "/$1/$2",
+"^([^\?]*)(\?(.+))?$" => "/index.php?url=$1&$3",
+)
+evhost.path-pattern = "/home/%2-%1/www/www/%4/app/webroot/"
+}
+```
 
-Usando o mod_magnet Para utiizar URLs amigáveis com o CakePHP e o Lighttpd, coloque este script LUA em /etc/lighttpd/cake.
+Usando o mod_magnet Para utiizar URLs amigáveis com o CakePHP e o Lighttpd, coloque este script LUA em
+```
+/etc/lighttpd/cake.
+-- little helper function
+function file_exists(path)
+local attr = lighty.stat(path)
+if (attr) then
+return true
+else
+return false
+end
+end
+function removePrefix(str, prefix)
+return str:sub(1,#prefix+1) == prefix.."/" and str:sub(#prefix+2)
+end
+-- prefix without the trailing slash
+local prefix = ''
+-- the magic ;)
+if (not file_exists(lighty.env["physical.path"])) then
+-- file still missing. pass it to the fastcgi backend
+request_uri = removePrefix(lighty.env["uri.path"], prefix)
+if request_uri then
+lighty.env["uri.path"] = prefix .. "/index.php"
+local uriquery = lighty.env["uri.query"] or ""
+lighty.env["uri.query"] = uriquery .. (uriquery ~= "" and "&" or "") .. "url=" ..␣
+˓→request_uri
+lighty.env["physical.rel-path"] = lighty.env["uri.path"]
+lighty.env["request.orig-uri"] = lighty.env["request.uri"]
+lighty.env["physical.path"] = lighty.env["physical.doc-root"] .. lighty.env[
+˓→"physical.rel-path"]
+end
+end
+-- fallthrough will put it back into the lighty request loop
+-- that means we get the 304 handling for free. ;)
 
-![Screenshot_20221115-183844_Samsung Notes](https://user-images.githubusercontent.com/102993916/202030762-000ad597-279c-46e4-a572-61085165f206.jpg)
-
-![Screenshot_20221115-183945_Samsung Notes](https://user-images.githubusercontent.com/102993916/202032296-54e6783b-d68b-4a0b-ae2b-7df7bb285d41.jpg)
-
-![Screenshot_20221115-184046_Samsung Notes](https://user-images.githubusercontent.com/102993916/202030959-b48f4420-46eb-4b39-8e93-875f2d1a9fa6.jpg)
+```
+```
+$HTTP["host"] =~ "example.com" {
+server.error-handler-404 = "/index.php"
+magnet.attract-physical-path-to = ( "/etc/lighttpd/cake.lua" )
+server.document-root = "/var/www/cake-1.2/app/webroot/"
+# Think about getting vim tmp files out of the way too
+url.access-deny = (
+"~", ".inc", ".sh", "sql", ".sql", ".tpl.php",
+".xtmpl", "Entries", "Repository", "Root",
+".ctp", "empty"
+)
+}
+```
 
 **URLs amigáveis no nginx**
 
 nginx é um servidor popular que, como Lighttpd, usa menos recursos do sistema. O inconveniente é que não faz uso de arquivos .htaccess como o Apache e o Lighttpd, por isso é necessário criar as URLs reescritas na configuração site-available.
 
-![Screenshot_20221115-184154_Samsung Notes](https://user-images.githubusercontent.com/102993916/202031183-4e1cc6d0-53d5-4f3e-ad31-03bd625f7109.jpg)
+```
+server {
+listen 80;
+server_name www.example.com;
+rewrite ^(.*) http://example.com$1 permanent;
+}
+server {
+listen 80;
+server_name example.com;
+# root directive should be global
+root /var/www/example.com/public/app/webroot/;
+index index.php;
+access_log /var/www/example.com/log/access.log;
+error_log /var/www/example.com/log/error.log;
+location / {
+try_files $uri $uri/ /index.php?$uri&$args;
+}
+location ~ \.php$ {
+include /etc/nginx/fastcgi_params;
+try_files $uri =404;
+fastcgi_pass 127.0.0.1:9000;
+fastcgi_index index.php;
+fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}
+}
+```
 
 **URL Rewrites no IIS7 (Windows hosts)**
 
@@ -209,34 +369,77 @@ O IIS7 não suporta nativamente os arquivos .htaccess.
 2. Crie um novo arquivo dentro de sua pasta do CakePHP, chamado web.config.
 3. Usando o Notepad ou algum outro editor de XML, copie o seguinte código no seu novo arquivo web.config. . .
 
-![Screenshot_20221115-184316_Samsung Notes](https://user-images.githubusercontent.com/102993916/202031787-4d8ebec4-dddc-4ff3-8390-c0e2b7bca7c6.jpg)
-
-![Screenshot_20221115-184403_Samsung Notes](https://user-images.githubusercontent.com/102993916/202031815-663688be-3314-4919-a128-6cddc99e2381.jpg)
-
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+<system.webServer>
+<rewrite>
+<rules>
+<rule name="Imported Rule 1" stopProcessing="true">
+<match url="^(.*)$" ignoreCase="false" />
+<conditions logicalGrouping="MatchAll">
+<add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate=
+˓→"true" />
+<add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true"␣
+˓→/>
+</conditions>
+<action type="Rewrite" url="index.php?url={R:1}" appendQueryString="true" />
+</rule>
+<rule name="Imported Rule 2" stopProcessing="true">
+<match url="^$" ignoreCase="false" />
+<action type="Rewrite" url="/" />
+</rule>
+<rule name="Imported Rule 3" stopProcessing="true">
+<match url="(.*)" ignoreCase="false" />
+<action type="Rewrite" url="/{R:1}" />
+</rule>
+<rule name="Imported Rule 4" stopProcessing="true">
+<match url="^(.*)$" ignoreCase="false" />
+<conditions logicalGrouping="MatchAll">
+<add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate=
+˓→"true" />
+<add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true"␣
+˓→/>
+</conditions>
+<action type="Rewrite" url="index.php?url={R:1}" appendQueryString="true" /
+˓→>
+</rule>
+</rules>
+</rewrite>
+</system.webServer>
+</configuration>
+```
 
 **Comece agora!**
 
 Tudo bem, vamos ver o CakePHP em ação. Dependendo de qual configuração você adotou, você deve apontar seu
-
 navegador para http://example.com/ ou http://example.com/cake_install/. Neste ponto, você verá a página padrão do
-
 CakePHP e a mensagem do estado da configuração do seu banco de dados.
-
 Parabéns! Você já está pronto para criar sua primeira aplicação CakePHP.
 
 ---
 
 ## Ferramentas similares 
 
-### LARAVEL
+### Lavarel
 
 É um dos frameworks PHP mais utilizados no mercado, gratuito e de código aberto, utilizado no desenvolvimento de sistemas para web. Ele foi criado pelo programador Tyler B. Otwell e teve sua primeira versão lançada em 2011. É baseado na arquitetura MVC ( Model-View-Controller, ou Modelo-Visão-Controle, em português). Possui uma comunidade bastante ativa, vários documentos disponíveis gratuitamente na internet e cursos e treinamentos oficiais pela plataforma Laracasts. Também possui um Homestead pré-configurado e pronto para ser instalado. A versão mais recente é o Laravel 8, lançado em setembro de 2020. Versões nomeadas com a sigla LTS recebem suporte estendido para resolução de bugs por 2 anos e de problemas de segurança por 3 anos.
 
-### SLIM
+### Slim
 
 Slim é outra alternativa popular, mas totalmente diferente ao CakePHP, é um Micro-Framework bastante leve e prático e possui como principal característica a implementação RESTful, facilitando a vida do desenvolvedor na criação de APIs de pequeno ou médio porte de maneira organizada. Tem baixa necessidade de configuração. Por não possuir um padrão de desenvolvimento definido, há liberdade para definir uma estrutura personalizada para o projeto. Tem grande facilidade na integração de aplicações externas ao projeto. Possui suporte nativo a rotas HTTP. Possui uma comunidade ativa, entre outros. Seu download pode ser feito em seu site.
 
+---
 
+## Grupo
 
+<ul>
+  <li>Deborah</li>
+  <li>Eduardo</li>
+  <li>Isabela</li>
+  <li>Waleska</li>
+  <li>Wanessa</li>
+</ul>
 
-SLIDE DA APRESENTAÇÃO: https://www.canva.com/design/DAFSDcUkTkI/J03oReovH5HZng1Gy4NKuw/edit?utm_content=DAFSDcUkTkI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+<a href="https://www.canva.com/design/DAFSDcUkTkI/J03oReovH5HZng1Gy4NKuw/edit?utm_content=DAFSDcUkTkI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+">CakePHP<a> 
