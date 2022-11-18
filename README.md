@@ -418,6 +418,46 @@ CakePHP e a mensagem do estado da configuração do seu banco de dados.
 Parabéns! Você já está pronto para criar sua primeira aplicação CakePHP.
 
 ---
+## Primeiros Passos
+
+- Instale o Controller ultilizando o comando seguinte:
+```
+mv composer.phar /usr/local/bin/composer
+```
+- Crie o esqueleto da aplicação:
+```
+php composer.phar create-project --prefer-dist cakephp/app my_app_name
+```
+- Aponte a aplicação para o www do servidor ultilizado(no caso XAMP), se precisar:
+```
+C:\xampp\htdocs>composer create-project --prefer-dist cakephp/app my_app_name
+
+Installing cakephp/app (3.3.2)
+  - Installing cakephp/app (3.3.2)
+    Downloading: 100%
+
+Created project in my_app_name
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Your requirements could not be resolved to an installable set of packages.
+```
+- Crie um Controller manualmente, ou via bake:
+```
+bin/cake bake controller %controllerName%
+```
+- Edite o arquivo como desejado e boa sorte!
+```
+<?php 
+  App::uses('Component', 'Controller');
+  class MuniComponent extends Component {
+    // hello world function
+    public function hello() {
+      return 'hello world';
+    }
+  }	
+?>
+```
+---
 
 ## Ferramentas similares 
 
