@@ -30,6 +30,10 @@ Além disso, o CakePHP possui recursos importantes como validação embutida, li
 Um exemplo disso é quando desejamos modificar todo o layout de páginas sem mudar o restante da aplicação. 
 
 A arquitetura MVC no CakePHP é representada assim:
+
+<p align="center">
+  <img src="arquitetura_mvc_cakephp.jpg" />
+</p>
   
 
 
